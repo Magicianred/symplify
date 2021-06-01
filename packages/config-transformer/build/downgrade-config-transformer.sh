@@ -34,7 +34,7 @@ note "Running downgrade in '$BUILD_DIRECTORY' directory\n"
 export IFS=";"
 
 # 4. downgrade the directories
-note "Downgrading '$directory' directory\n"
+note "Downgrading directories\n"
 
 # --working-dir is needed, so "SKIP" parameter is applied in absolute path of nested directory
 php -d memory_limit=-1 vendor/bin/rector process bin src vendor --config packages/config-transformer/build/config/config-downgrade.php --working-dir $BUILD_DIRECTORY --ansi
