@@ -57,6 +57,8 @@ parameters:
         - rector.php
 
     excludes_analyse:
+        - */scoper.php
+
         - packages/easy-coding-standard/build/target-repository/bootstrap.php
         - packages/easy-coding-standard/build/build-preload.php
         # there is some bug
@@ -163,9 +165,6 @@ parameters:
         -
             message: '#Use value object over return of values#'
             paths:
-                # php scoper config array
-                - */scoper.inc.php
-
                 # Symfony API
                 - packages/easy-coding-standard/src/Console/Output/JsonOutputFormatter.php
                 - packages/config-transformer/src/Configuration/Configuration.php
